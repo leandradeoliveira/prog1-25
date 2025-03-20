@@ -7,10 +7,10 @@
 
         //anotacao de tipos 
 
-        public userCount = 10;
-        var teste = 10;
+        public int userCount = 10;
+        
         // uma variavel pode  ser declarada e nao inicializado 
-        int totlCount;
+        int totalCount;
 
         // o metodo construtor e invocado na instanciacao do
         // objete por meio da palavra reservads new 
@@ -18,7 +18,9 @@
         //
          public variaveis ()
         {
-            totalCont = 0;
+
+            var teste = 10;
+            totalCount = 0;
 
             // TIPO IMPLICITO
             // a palavra cahave var se encarega de definir o
@@ -31,17 +33,21 @@
 
             byte MinValue = 0;
             byte MaxValue = 255;
-            short MaxValue = 32767;
-            int MinValue = -2147483648;
-            int MaxValue = 2147483647;
-            uint MinValue = 0;
-            uint MaxValue = 4294967295;
-            long MinValue = -9223372036854775808;
-            long MaxValue = 9223372036854775807;
+
+            short MaxValue1 = 32767;
+
+            int MinValue2 = -2147483648;
+            int MaxValue2 = 2147483647;
+
+            uint MinValue3 = 0;
+            uint MaxValue3 = 4294967295;
+
+            long MinValue4 = -9223372036854775808;
+            long MaxValue4 = 9223372036854775807;
 
 
             var signalStrangth = 22;
-            var companyName = string.ACME;
+            var companyName = "ACNE";
 
 
         }

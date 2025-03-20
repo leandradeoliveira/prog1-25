@@ -1,8 +1,8 @@
 using System.Diagnostics;
-using Aula1.Models;
+using aula2.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Aula1.Controllers
+namespace aula2.Controllers
 {
     public class HomeController : Controller
     {
@@ -15,13 +15,15 @@ namespace Aula1.Controllers
 
         public IActionResult Index()
         {
-            variaveis minhavariavel = new variaveis();
-            return View(minhavariavel);
-        }
-
-        public IActionResult Privacy()
-        {
             return View();
+        }
+        [HttpGet]
+        public IActionResult Privacy()
+
+        {
+            DataTypes dataTypes = new();
+
+            return View(dataTypes);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
