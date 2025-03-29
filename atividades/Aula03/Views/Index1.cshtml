@@ -1,0 +1,74 @@
+﻿@page
+@model Aula03.Views.JogoVelha.JogoVelha.IndexModel
+
+<h2>Jogo da Velha</h2>
+
+@if
+
+(
+ViewBag
+.
+Winner
+!=
+
+null
+)
+
+{
+
+
+    <
+    h3
+    >
+    Vencedor: 
+
+    ViewBag
+    .
+    Winner
+    </
+    h3
+    >
+
+}
+
+
+<form id="JogoVelhaForm" method="post">
+    <div>
+        <table>
+            <tr>
+                <td>re
+                    <input type="text" name="A00" maxLength="1" pattern="[XO]"required />
+                </td>
+                <td>
+                    <input type="text" name="A01" maxLength="1" pattern="[XO]" required/>
+                </td>
+                <td>
+                    <input type="text" name="A02" maxLength="1" pattern="[XO]"required />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" name="A10" maxLength="1" pattern="[XO]"required />
+                </td>
+                <td>
+                    <input type="text" name="A11" maxLength="1" pattern="[XO]"required />
+                </td>
+                <td>
+                    <input type="text" name="A12" maxLength="1" pattern="[XO]"required />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" name="A20" maxLength="1" pattern="[XO]"required />
+                </td>
+                <td>
+                    <input type="text" name="A21" maxLength="1" pattern="[XO]"required />
+                </td>
+                <td>
+                    <input type="text" name="A22" maxLength="1" pattern="[XO]" required/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <button type="submit">Submit</button>
+</form
