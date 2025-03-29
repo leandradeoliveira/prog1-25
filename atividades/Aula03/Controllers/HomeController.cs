@@ -1,6 +1,7 @@
-using System.Diagnostics;
 using Aula03.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging; 
+using System.Diagnostics;
 
 namespace Aula03.Controllers
 {
@@ -16,7 +17,7 @@ namespace Aula03.Controllers
         [HttpGet]
         public string GetIf(int x)
         {
-            string retorno = string.Empty;
+            string retorno;
 
             if (x < 9)
                 return "x é menor que nove";
@@ -52,7 +53,8 @@ namespace Aula03.Controllers
         [HttpGet]
         public string GetSwitch(int x)
         {
-            string retorno = string.Empty;
+            string retorno;
+
             switch (x)
             {
                 case 0:
@@ -81,7 +83,32 @@ namespace Aula03.Controllers
             string retorno = string.Empty;
             for (int i = 0; i < 10; i++)
             {
+                if (i > 50)
+                    break;
+
+                if ((i % 2) != 0)
+                    continue;
+
                 retorno += $"{i};";
+            }
+
+            return retorno;
+        }
+
+        [HttpGet]
+        public string GetForeach(string color)
+        {
+            string[] colors = { "vermelho", "preto", "amarelo", "verde", "branco", "roxo" };
+            string retorno = string.Empty;
+
+            if (colors.Contains(color))
+                retorno = "A cor escolhida é " + color;
+            else
+                retorno = "Cor escolhida inválida.";
+
+            foreach (string s in colors)
+            {
+                retorno += $"[{s}]";
             }
 
             return retorno;

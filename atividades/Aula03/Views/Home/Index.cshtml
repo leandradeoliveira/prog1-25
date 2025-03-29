@@ -3,26 +3,37 @@
 }
 
 <div>
-    <form method="Get" asp-action="Getif">
+    <form method="Get" asp-action="GetIf">
         <div class="form-group">
-          <label for="xDoIf"> valor de x</label>
-          <input type = "text" name="x" id = "xDoIf"/>
-          
+            <label for="xDoIf">Valor de x</label>
+            <input type="text" name="x" id="xDoIf" />
         </div>
         <button type="submit">
-                GETIF
+            GETIF
         </button>
     </form>
 </div>
-<div>
-    <form method="Get" asp-action="GetSwitch">
-        <div class="form-group">
-          <label for="xDoSwitch"> valor de x</label>
-          <input type = "text" name="x" id = "xDoSwitch"/>
 
+<div>
+    <form method="Get" asp-action="GetFor">
+        <div class="form-group">
+            <label for="xDoFor">Valor de x</label>
+            <input type="text" name="x" id="xDoFor" />
         </div>
         <button type="submit">
-                GETSWITCH
+            GETFOR
         </button>
     </form>
+</div>
+
 <div>
+    <form method="Get" asp-action="GetForeach">
+        <div class="form-group">
+            <label for="xDoForeach">Cor</label>
+            <input type="text" name="color" id="xDoForeach" />
+        </div>
+        <button type="submit">
+            GETFOREACH
+        </button>
+    </form>
+</div>
