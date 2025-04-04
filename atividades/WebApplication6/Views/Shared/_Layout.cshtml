@@ -1,0 +1,33 @@
+﻿@model dynamic
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1>Calculadora de Números</h1>
+    <form asp-action="ProcessInputs" method="post">
+        <div class="form-group">
+            <label for="n">Digite um número (N):</label>
+            <input type="number" id="n" name="n" class="form-control" required />
+        </div>
+        <div class="form-group">
+            <label for="inputString">Digite uma string:</label>
+            <input type="text" id="inputString" name="inputString" class="form-control" required />
+        </div>
+        <div class="form-group">
+            <label for="word">Digite uma palavra:</label>
+            <input type="text" id="word" name="word" class="form-control" required />
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+
+    @if (Model != null)
+    {
+            <h2>Resultados:</h2>
+            <p><strong>Números de N a 1:</strong> @string.Join(", ", Model.Numbers)</p>
+            <p><strong>Soma de 1 a N:</strong> @Model.Sum</p>
+            <p><strong>Contagem de caracteres:</strong> @Model.CharacterCount</p>
+            <p><strong>É um palíndromo?</strong> @Model.IsPalindrome</p>
+    }
+</div>
